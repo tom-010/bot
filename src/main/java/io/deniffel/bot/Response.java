@@ -2,6 +2,7 @@ package io.deniffel.bot;
 
 public class Response {
     private boolean present = false;
+    private String content;
 
     public boolean isPresent() {
         return present;
@@ -11,14 +12,10 @@ public class Response {
         this.present = present;
     }
 
-    public String content() {
-        return null;
-    }
-
-
-    public static Response of(String later) {
+    public static Response of(String messageContent) {
         Response r = new Response();
         r.setPresent(true);
+        r.content = messageContent;
         return r;
     }
 
@@ -26,5 +23,9 @@ public class Response {
         Response r = new Response();
         r.setPresent(false);
         return r;
+    }
+
+    public String response() {
+        return content;
     }
 }

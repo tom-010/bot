@@ -1,7 +1,9 @@
 package io.deniffel.bot.acceptance;
 
+import cucumber.api.java.Before;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.deniffel.bot.EchoBot;
 import io.deniffel.bot.Response;
 import io.deniffel.bot.SkyBot;
 
@@ -9,9 +11,15 @@ import static org.junit.Assert.*;
 
 public class CommonSteps {
 
-    SkyBot bot = new SkyBot();
+    SkyBot bot;
+    Response lastResult;
 
-    Response lastResult = null;
+    @Before
+    public void setUp(){
+        bot = new SkyBot();
+        bot.register(new EchoBot());
+        lastResult = null;
+    }
 
     @When("^I enter \"([^\"]*)\"$")
     public void iEnter(String enteredString) throws Throwable {
@@ -20,6 +28,6 @@ public class CommonSteps {
 
     @Then("^the bot returns \"([^\"]*)\"$")
     public void theBotReturns(String botsReturnValue) throws Throwable {
-        assertEquals(botsReturnValue, lastResult.content());
+        assertEquals(botsReturnValue, lastResult.response());
     }
 }

@@ -4,6 +4,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh './gradlew test'
+                sh './gradlew cucumber'
             }
         }
         stage('Build') {
@@ -11,7 +12,7 @@ pipeline {
                sh './gradlew build'
             }
         }
-        stage('Docker') {
+        stage('Dockerize') {
             steps {
                 sh 'echo "tdeniffelbot" | docker login --username tdeniffelbot --password-stdin'
                 sh 'docker build . -t tdeniffelbot/bot'
