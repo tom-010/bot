@@ -29,7 +29,7 @@ public class EchoTest {
     @Test
     public void multipleBlanksBeforeAndAfterEcho_ignoresIt() {
         assertEcho("hello", "echo  hello");
-        assertEcho("hello", "echo       hello");
+        assertEcho("hello2", "echo       hello");
     }
 
     @Test
