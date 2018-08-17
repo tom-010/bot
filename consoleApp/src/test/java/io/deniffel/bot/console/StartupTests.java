@@ -16,13 +16,13 @@ public class StartupTests {
 
     @Test
     public void applicationStartswithin5Seconds() throws InterruptedException {
-//        Thread thread = new Thread(() -> {
-//            BotApplication.main(new String[]{});
-//            started = true;
-//        });
-//        thread.start();
-//        thread.join(5*SECONDS);
-//        assertTrue(started);
+        Thread thread = new Thread(() -> {
+            ConsoleApp.main(new String[]{});
+            started = true;
+        });
+        thread.start();
+        thread.join(5*SECONDS);
+        assertTrue(started || ConsoleApp.startFinished);
     }
 
     static Long SECONDS = 1000L;
