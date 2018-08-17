@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="io.deniffel.bot.RemoteMessageExchange" tests="12" skipped="0" failures="0" errors="0" timestamp="2018-08-17T19:24:53" hostname="thomas-skytala" time="0.007">
+<testsuite name="io.deniffel.bot.RemoteMessageExchange" tests="12" skipped="0" failures="0" errors="0" timestamp="2018-08-17T19:31:39" hostname="thomas-skytala" time="0.008">
   <properties/>
-  <testcase name="noOtherBotIsRegistered_doesNotCall" classname="io.deniffel.bot.RemoteMessageExchange" time="0.004"/>
+  <testcase name="noOtherBotIsRegistered_doesNotCall" classname="io.deniffel.bot.RemoteMessageExchange" time="0.003"/>
   <testcase name="multipleBotsMatch_onlyOneMessageIsSent" classname="io.deniffel.bot.RemoteMessageExchange" time="0.0"/>
-  <testcase name="botDoesNotMatch_noMessage" classname="io.deniffel.bot.RemoteMessageExchange" time="0.0"/>
+  <testcase name="botDoesNotMatch_noMessage" classname="io.deniffel.bot.RemoteMessageExchange" time="0.001"/>
   <testcase name="message_toBotThatMatches" classname="io.deniffel.bot.RemoteMessageExchange" time="0.0"/>
   <testcase name="noBotMatchedMessage_resultNotPresent" classname="io.deniffel.bot.RemoteMessageExchange" time="0.0"/>
   <testcase name="message_sendsToUrlOfRegisteredRemoteBot" classname="io.deniffel.bot.RemoteMessageExchange" time="0.001"/>
   <testcase name="inValidMessage_causesNoHttpRequestIfMessageIsNotValid" classname="io.deniffel.bot.RemoteMessageExchange" time="0.0"/>
   <testcase name="nullMatcher_doesNotMatch" classname="io.deniffel.bot.RemoteMessageExchange" time="0.0"/>
   <testcase name="message_causesAHttpPostRequest" classname="io.deniffel.bot.RemoteMessageExchange" time="0.0"/>
-  <testcase name="invalidMessage_responseNotPresent" classname="io.deniffel.bot.RemoteMessageExchange" time="0.0"/>
-  <testcase name="null_responseNotPresent" classname="io.deniffel.bot.RemoteMessageExchange" time="0.001"/>
+  <testcase name="invalidMessage_responseNotPresent" classname="io.deniffel.bot.RemoteMessageExchange" time="0.001"/>
+  <testcase name="null_responseNotPresent" classname="io.deniffel.bot.RemoteMessageExchange" time="0.0"/>
   <testcase name="nullMessage_causesNoHttpRequestIfMessageIsNotValid" classname="io.deniffel.bot.RemoteMessageExchange" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
