@@ -5,11 +5,11 @@ public class EchoBot implements Bot {
     private String keyword = "echo";
 
     @Override
-    public Response enter(String enteredString) {
+    public Response enter(Message enteredString) {
         if(enteredString == null)
             return Response.notPresent();
 
-        String input = enteredString.trim();
+        String input = enteredString.stingContent().trim();
 
         if(!input.startsWith(keyword))
             return Response.notPresent();

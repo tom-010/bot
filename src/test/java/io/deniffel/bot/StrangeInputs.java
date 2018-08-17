@@ -17,7 +17,7 @@ public class StrangeInputs {
 
     @Test
     public void null_noResponse() {
-        Response response = bot.enter(null);
+        Response response = bot.enter((Message) null);
         assertFalse(response.isPresent());
     }
 

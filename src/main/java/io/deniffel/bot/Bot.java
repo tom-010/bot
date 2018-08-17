@@ -1,5 +1,9 @@
 package io.deniffel.bot;
 
 public interface Bot {
-    Response enter(String enteredString);
+    default Response enter(String enteredString) {
+        return enter(new Message(enteredString));
+    }
+
+    Response enter(Message message);
 }

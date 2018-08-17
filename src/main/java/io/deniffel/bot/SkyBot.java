@@ -10,7 +10,7 @@ public class SkyBot implements Bot {
     private List<Bot> subBot = new LinkedList<>();
 
     @Override
-    public Response enter(String enteredString) {
+    public Response enter(Message enteredString) {
         for(Bot bot : subBot) {
             Response response = bot.enter(enteredString);
             if(response != null && response.isPresent())

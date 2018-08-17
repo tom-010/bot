@@ -34,7 +34,7 @@ public class EchoTest {
 
     @Test
     public void null_emptyResponse() {
-        assertFalse(bot.enter(null).isPresent());
+        assertFalse(bot.enter((Message) null).isPresent());
     }
 
     @Test

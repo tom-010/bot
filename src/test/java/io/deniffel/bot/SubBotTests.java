@@ -18,8 +18,8 @@ public class SubBotTests {
         Response nextResult = null;
 
         @Override
-        public Response enter(String enteredString) {
-            lastEnteredString = enteredString;
+        public Response enter(Message enteredString) {
+            lastEnteredString = enteredString.stingContent();
             wasCalled = true;
             return nextResult;
         }
