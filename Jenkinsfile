@@ -5,6 +5,12 @@ pipeline {
             steps {
                 sh './gradlew test'
                 sh './gradlew cucumber'
+
+            }
+        }
+        stage('Test-Coverage') {
+            steps {
+                sh './gradlew jacocoTestCoverageVerification'
             }
         }
         stage('Build') {
