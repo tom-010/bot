@@ -15,14 +15,19 @@ public class StartupTests {
     }
 
     @Test
+    public void canInstanciateConsoleApp() {
+        new ConsoleApp(); // No exception
+    }
+
+    @Test
     public void applicationStartswithin5Seconds() throws InterruptedException {
         Thread thread = new Thread(() -> {
-            ConsoleApp.main(new String[]{});
+            ConsoleApp.main();
             started = true;
         });
         thread.start();
         thread.join(5*SECONDS);
-        assertTrue(started || ConsoleApp.startFinished);
+        assertTrue(started);
     }
 
     static Long SECONDS = 1000L;

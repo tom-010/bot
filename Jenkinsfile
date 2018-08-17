@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Test-Coverage') {
             steps {
-                sh './gradlew jacocoTestCoverageVerification'
+                sh './gradlew skyBot:jacocoTestCoverageVerification'
             }
         }
         stage('Build') {
