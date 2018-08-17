@@ -110,7 +110,17 @@ public class RemoteMessageExchange {
         Response r = bot.enter("this message does not match to bot1 or bot2");
 
         assertFalse(r.isPresent());
+    }
 
+    @Test
+    public void nullMatcher_doesNotMatch() {
+        RemoteBot bot = botWithoutRegistrations;
+        bot.register(new RegistrationRequest("http://b1", null));
+
+        Response r = bot.enter("message");
+
+        assertFalse(r.isPresent());
+        assertFalse(http.wasCalled);
     }
 
     /*
