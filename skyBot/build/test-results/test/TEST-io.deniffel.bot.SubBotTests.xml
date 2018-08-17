@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="io.deniffel.bot.SubBotTests" tests="5" skipped="0" failures="0" errors="0" timestamp="2018-08-17T20:36:31" hostname="thomas-skytala" time="0.001">
+<testsuite name="io.deniffel.bot.SubBotTests" tests="5" skipped="0" failures="0" errors="0" timestamp="2018-08-17T21:04:09" hostname="thomas-skytala" time="0.001">
   <properties/>
   <testcase name="message_delegatesMessageToSubBot" classname="io.deniffel.bot.SubBotTests" time="0.0"/>
   <testcase name="onlyFirstSubBotsKnowsTheAnswer_firstsBotResponse" classname="io.deniffel.bot.SubBotTests" time="0.0"/>
-  <testcase name="subBotDoesNotRespond_subBotsResponseIsDiscarded" classname="io.deniffel.bot.SubBotTests" time="0.0"/>
+  <testcase name="subBotDoesNotRespond_subBotsResponseIsDiscarded" classname="io.deniffel.bot.SubBotTests" time="0.001"/>
   <testcase name="subBotResultsInResponse_responseFromSubBotIsActuallyTaken" classname="io.deniffel.bot.SubBotTests" time="0.0"/>
   <testcase name="onlySecondSubBotsKnowsTheAnswer_secondsBotResponse" classname="io.deniffel.bot.SubBotTests" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
