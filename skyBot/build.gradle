@@ -40,11 +40,11 @@ jacocoTestCoverageVerification {
         rule {
             limit {
                 counter = 'CLASS'
-                minimum = 0.9
+                minimum = 1.0
             }
             limit {
                 counter = 'LINE'
-                minimum = 0.9
+                minimum = 1.0
             }
         }
     }
@@ -64,6 +64,6 @@ dependencies {
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile('io.cucumber:cucumber-java:3.0.2')
     testCompile('io.cucumber:cucumber-junit:3.0.2')
-    // compile project(':bot')
+    compile project(':bot')
 }
 
