@@ -1,5 +1,3 @@
-package io.deniffel.bot;
-
 import io.deniffel.bot.base.Message;
 import org.junit.Test;
 

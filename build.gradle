@@ -1,10 +1,39 @@
 subprojects {
     apply plugin: 'java'
-    group = 'io.deniffel.bot'
-    version = '1.0'
+    apply plugin: 'eclipse'
+    apply plugin: 'jacoco'
+
+    group = 'io.deniffel'
+    version = '0.0.1-SNAPSHOT'
+    sourceCompatibility = 1.8
     repositories {
         mavenCentral()
     }
+
+    jacocoTestCoverageVerification {
+        violationRules {
+            rule {
+                limit {
+                    counter = 'CLASS'
+                    minimum = 1.0
+                }
+                limit {
+                    counter = 'LINE'
+                    minimum = 1.0
+                }
+            }
+        }
+    }
+    jacocoTestCoverageVerification.dependsOn test
+
+    test {
+        jacoco {
+            append = false
+            destinationFile = file("$buildDir/jacoco/jacocoTest.exec")
+            classDumpDir = file("$buildDir/jacoco/classpathdumps")
+        }
+    }
+
     dependencies {
         testCompile "junit:junit:4.12"
     }
