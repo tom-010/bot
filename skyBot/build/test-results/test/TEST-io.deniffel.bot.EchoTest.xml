@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.deniffel.bot.EchoTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2018-08-17T19:24:53" hostname="thomas-skytala" time="0.001">
+  <properties/>
+  <testcase name="multipleBlanksBeforeAndAfterEcho_ignoresIt" classname="io.deniffel.bot.EchoTest" time="0.0"/>
+  <testcase name="sendingSimpleEcho_returnsTheSameMessageWithoutEcho" classname="io.deniffel.bot.EchoTest" time="0.0"/>
+  <testcase name="leadingBlank_ignoresIt" classname="io.deniffel.bot.EchoTest" time="0.001"/>
+  <testcase name="onlyEchoIsInMessage_emptyPresentMessageIsReturned" classname="io.deniffel.bot.EchoTest" time="0.0"/>
+  <testcase name="doesNotStartWithEcho_emptyResponse" classname="io.deniffel.bot.EchoTest" time="0.0"/>
+  <testcase name="null_emptyResponse" classname="io.deniffel.bot.EchoTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
