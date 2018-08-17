@@ -1,4 +1,4 @@
-package io.deniffel.bot.skyBot;
+package io.deniffel.bot.base;
 
 public class Response {
     private boolean present = false;

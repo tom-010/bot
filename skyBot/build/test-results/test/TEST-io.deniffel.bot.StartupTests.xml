@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="io.deniffel.bot.StartupTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-08-17T20:25:44" hostname="thomas-skytala" time="0.298">
+<testsuite name="io.deniffel.bot.StartupTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-08-17T20:30:00" hostname="thomas-skytala" time="0.364">
   <properties/>
-  <testcase name="applicationStartswithin5Seconds" classname="io.deniffel.bot.StartupTests" time="0.298"/>
+  <testcase name="applicationStartswithin5Seconds" classname="io.deniffel.bot.StartupTests" time="0.364"/>
   <system-out><![CDATA[+--------+
 | SkyBot | Created by Thomas Deniffel
 +--------+
-2018-08-17 22:25:44.317  INFO 29590 --- [       Thread-7] io.deniffel.bot.BotApplication           : Starting BotApplication on thomas-skytala with PID 29590 (/home/thomas/Projects/bot/skyBot/build/classes/java/main started by thomas in /home/thomas/Projects/bot/skyBot)
-2018-08-17 22:25:44.318  INFO 29590 --- [       Thread-7] io.deniffel.bot.BotApplication           : No active profile set, falling back to default profiles: default
-2018-08-17 22:25:44.322  INFO 29590 --- [       Thread-7] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@381cca61: startup date [Fri Aug 17 22:25:44 CEST 2018]; root of context hierarchy
-2018-08-17 22:25:44.581  INFO 29590 --- [       Thread-7] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2018-08-17 22:25:44.588  INFO 29590 --- [       Thread-7] io.deniffel.bot.BotApplication           : Started BotApplication in 0.292 seconds (JVM running for 3.68)
+2018-08-17 22:30:00.059  INFO 30142 --- [       Thread-7] io.deniffel.bot.BotApplication           : Starting BotApplication on thomas-skytala with PID 30142 (/home/thomas/Projects/bot/skyBot/build/classes/java/main started by thomas in /home/thomas/Projects/bot/skyBot)
+2018-08-17 22:30:00.061  INFO 30142 --- [       Thread-7] io.deniffel.bot.BotApplication           : No active profile set, falling back to default profiles: default
+2018-08-17 22:30:00.068  INFO 30142 --- [       Thread-7] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6e8b43e9: startup date [Fri Aug 17 22:30:00 CEST 2018]; root of context hierarchy
+2018-08-17 22:30:00.373  INFO 30142 --- [       Thread-7] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-08-17 22:30:00.381  INFO 30142 --- [       Thread-7] io.deniffel.bot.BotApplication           : Started BotApplication in 0.358 seconds (JVM running for 3.544)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
