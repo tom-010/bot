@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.deniffel.bot.console.StartupTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-08-17T21:09:53" hostname="thomas-skytala" time="0.002">
+  <properties/>
+  <testcase name="applicationStartswithin5Seconds" classname="io.deniffel.bot.console.StartupTests" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
