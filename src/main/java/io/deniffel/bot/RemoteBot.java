@@ -1,8 +1,14 @@
 package io.deniffel.bot;
 
+import com.sun.org.apache.bcel.internal.generic.RETURN;
+
+import java.util.LinkedList;
+import java.util.List;
+
 public class RemoteBot implements Bot {
 
-    Http http;
+    private Http http;
+    private List<RegisteredBot> registeredBots = new LinkedList<>();
 
     public RemoteBot(Http http) {
         this.http = http;
@@ -10,12 +16,46 @@ public class RemoteBot implements Bot {
 
     @Override
     public Response enter(Message message) {
-        if(message == null || !message.valid())
+        if(message == null || !message.valid() || !atLastOneRemoteBotIsRegistered())
             return Response.notPresent();
-        return http.sendMessage(message, "");
+
+        for(RegisteredBot bot : registeredBots) {
+            if(bot.matches(message))
+                return http.sendMessage(message, registeredBots.get(0).url);
+        }
+
+        return Response.notPresent();
     }
 
     public boolean atLastOneRemoteBotIsRegistered() {
-        return false;
+        return !registeredBots.isEmpty();
+    }
+
+    public void register(RegistrationRequest registration) {
+        if(!registrationAllowed(registration))
+            return;
+
+        registeredBots.add(new RegisteredBot(registration));
+    }
+
+    private boolean registrationAllowed(RegistrationRequest request) {
+        return request != null && request.getMyUrl() != null && !request.getMyUrl().isEmpty();
+    }
+
+    private class RegisteredBot {
+        String url;
+        String matcher;
+
+        RegisteredBot(RegistrationRequest request) {
+            this.url = request.getMyUrl();
+            this.matcher = request.getMatcher();
+        }
+
+        boolean matches(Message message) {
+            if(matcher == null)
+                return false;
+
+            return message.stingContent().matches(matcher);
+        }
     }
 }

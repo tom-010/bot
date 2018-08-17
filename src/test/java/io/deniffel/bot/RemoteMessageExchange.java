@@ -1,29 +1,23 @@
 package io.deniffel.bot;
 
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class RemoteMessageExchange {
 
-    RemoteBot bot;
-    HttpMock http;
+    private RemoteBot bot;
+    private RemoteBot botWithoutRegistrations;
+    private HttpMock http;
 
-
-    class HttpMock implements Http {
-        boolean wasCalled = false;
-        @Override public Response sendMessage(Message message, String url) {
-            wasCalled = true;
-            return null;
-        }
-    }
 
     @Before
     public void setUp() throws Exception {
         http = new HttpMock();
+        botWithoutRegistrations = new RemoteBot(http);
         bot = new RemoteBot(http);
+        bot.register(new RegistrationRequest("http://myUrl", ".*"));
     }
 
     @Test
@@ -60,16 +54,102 @@ public class RemoteMessageExchange {
     }
 
     @Test
-    @Ignore
     public void noOtherBotIsRegistered_doesNotCall() {
-        assertFalse(bot.atLastOneRemoteBotIsRegistered());
         Message validMessage = new Message("some content");
         assertTrue(validMessage.valid());
-        bot.enter(validMessage);
+
+        botWithoutRegistrations.enter(validMessage);
         assertFalse(http.wasCalled);
     }
 
+    @Test
+    public void message_sendsToUrlOfRegisteredRemoteBot() {
+        RemoteBot bot = botWithoutRegistrations;
+        bot.register(new RegistrationRequest("http://bots-endpoint/", ".*"));
+        bot.enter("some message");
+        assertEquals("http://bots-endpoint/", http.lastUrlUsed);
+    }
+
+    @Test
+    public void message_toBotThatMatches() {
+        RemoteBot bot = botWithoutRegistrations;
+        RegistrationRequest otherBot = new RegistrationRequest("http://bot-with-regex", "bot .*");
+        bot.register(otherBot);
+        bot.enter("bot message");
+        assertEquals("http://bot-with-regex", http.lastUrlUsed);
+    }
+
+    @Test
+    public void botDoesNotMatch_noMessage() {
+        RemoteBot bot = botWithoutRegistrations;
+        RegistrationRequest otherBot = new RegistrationRequest("http://bot-with-regex", "bot .*");
+        bot.register(otherBot);
+
+        bot.enter("some message, that does not match");
+        assertFalse(http.wasCalled);
+    }
+
+    @Test
+    public void multipleBotsMatch_onlyOneMessageIsSent() {
+        RemoteBot bot = botWithoutRegistrations;
+        bot.register(new RegistrationRequest("http://b1", "bot .*"));
+        bot.register(new RegistrationRequest("http://b2", "bot .*"));
+
+        bot.enter("bot some message");
+
+        assertEquals(1, http.totalRequests);
+        assertEquals("http://b1", http.lastUrlUsed);
+    }
+
+    @Test
+    public void noBotMatchedMessage_resultNotPresent() {
+        RemoteBot bot = botWithoutRegistrations;
+        bot.register(new RegistrationRequest("http://b1", "bot1 .*"));
+        bot.register(new RegistrationRequest("http://b2", "bot2 .*"));
+
+        Response r = bot.enter("this message does not match to bot1 or bot2");
+
+        assertFalse(r.isPresent());
+
+    }
+
     /*
-    Doesnt call, if no other remote is registered
+    Git hooks
+    Regex
      */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
