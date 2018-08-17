@@ -1,4 +1,7 @@
-package io.deniffel.bot;
+package io.deniffel.bot.base;
+
+import io.deniffel.bot.skyBot.Message;
+import io.deniffel.bot.skyBot.Response;
 
 public interface Bot {
     default Response enter(String enteredString) {

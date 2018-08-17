@@ -1,4 +1,6 @@
-package io.deniffel.bot;
+package io.deniffel.bot.skyBot;
+
+import io.deniffel.bot.base.Bot;
 
 import java.util.LinkedList;
 import java.util.List;

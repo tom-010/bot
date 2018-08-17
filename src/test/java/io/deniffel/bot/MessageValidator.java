@@ -1,6 +1,6 @@
 package io.deniffel.bot;
 
-import org.junit.Assert;
+import io.deniffel.bot.skyBot.Message;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

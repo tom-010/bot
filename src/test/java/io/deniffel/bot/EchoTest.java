@@ -1,5 +1,8 @@
 package io.deniffel.bot;
 
+import io.deniffel.bot.skyBot.EchoBot;
+import io.deniffel.bot.skyBot.Message;
+import io.deniffel.bot.skyBot.Response;
 import org.junit.Before;
 import org.junit.Test;
 

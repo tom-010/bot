@@ -1,5 +1,7 @@
 package io.deniffel.bot;
 
+import io.deniffel.bot.skyBot.RegistrationRequest;
+import io.deniffel.bot.skyBot.RemoteBot;
 import org.junit.Before;
 import org.junit.Test;
 

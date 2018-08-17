@@ -1,5 +1,9 @@
 package io.deniffel.bot;
 
+import io.deniffel.bot.skyBot.Http;
+import io.deniffel.bot.skyBot.Message;
+import io.deniffel.bot.skyBot.Response;
+
 class HttpMock implements Http {
     boolean wasCalled = false;
     String lastUrlUsed = null;

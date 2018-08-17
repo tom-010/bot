@@ -1,4 +1,6 @@
-package io.deniffel.bot;
+package io.deniffel.bot.skyBot;
+
+import io.deniffel.bot.base.Bot;
 
 public class EchoBot implements Bot {
 
