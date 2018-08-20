@@ -1,8 +1,13 @@
 package io.deniffel.bot.console;
 
+import io.deniffel.bot.skyBot.EchoBot;
+
 import java.util.Scanner;
 
 public class ConsoleApp {
+
+    EchoBot bot = new EchoBot();
+
     public static void main(String... args) {
         new ConsoleApp().mainLoop();
     }
@@ -19,7 +24,7 @@ public class ConsoleApp {
     }
 
     private void handleInput(String input) {
-        System.out.println(input);
+        System.out.println(bot.enter(input).response());
     }
 
 
