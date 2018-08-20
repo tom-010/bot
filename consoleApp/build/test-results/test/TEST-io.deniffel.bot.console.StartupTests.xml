@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="io.deniffel.bot.console.StartupTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-08-20T09:38:16" hostname="thomas-skytala" time="0.006">
+<testsuite name="io.deniffel.bot.console.StartupTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-08-20T11:38:10" hostname="thomas-skytala" time="0.023">
   <properties/>
-  <testcase name="canInstanciateConsoleApp" classname="io.deniffel.bot.console.StartupTests" time="0.006"/>
-  <testcase name="applicationStartswithin5Seconds" classname="io.deniffel.bot.console.StartupTests" time="0.0"/>
+  <testcase name="canInstanciateConsoleApp" classname="io.deniffel.bot.console.StartupTests" time="0.018"/>
+  <testcase name="applicationStartswithin5Seconds" classname="io.deniffel.bot.console.StartupTests" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

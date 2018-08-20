@@ -1,6 +1,6 @@
 
-def activatorRegex() {
-    return "Hello.*";
+def activatorRegexes() {
+    return ["Hello.*"];
 }
 
 def answer(String incomingMessage, Map<String, Object> context = [:]) {

@@ -1,12 +1,23 @@
+package io.deniffel.bot.skyBot
+
 import java.nio.file.Files
-import java.nio.file.Path
 import java.nio.file.Paths
+import java.nio.file.Path
+
+class FileSystem {
+    List<Path> filesInFolder(String path) {
+        return Files.walk(Paths.get(path)).collect()
+    }
+}
 
 class PluginManager {
 
-    Map<String, String> scripts = [:];
+    protected Map<String, String> scripts = [:]
+    private FileSystem fs
 
-    private PluginManager() { }
+    private PluginManager(FileSystem fs = new FileSystem()) {
+        this.fs = fs
+    }
 
     static PluginManager build() {
         def manager = new PluginManager()
@@ -19,17 +30,19 @@ class PluginManager {
     }
 
     def init() {
-        Files.walk(Paths.get('.')).forEach{
+        new FileSystem().filesInFolder('.').forEach{
             if(it.fileName.toString() == filename() || Files.isDirectory(it))
                 return
 
-            def regex = null;
+            def regexes = null;
             new GroovyShell().parse(it.toFile()).with {
-                 regex = activatorRegex()
+                 regexes = activatorRegexes()
             }
 
-            if(regex != null) {
-                scripts[it.toAbsolutePath().toString()] = regex
+            if(regexes != null) {
+                regexes.forEach { regex ->
+                    scripts[regex] = it.toAbsolutePath().toString()
+                }
             }
         }
     }
@@ -38,9 +51,9 @@ class PluginManager {
 
         def result, context
 
-        scripts.forEach { file, activatorRegex ->
+        scripts.forEach { activatorRegex, file ->
             if(!message.matches(activatorRegex))
-                return;
+                return
 
             new GroovyShell().parse(new File(file)).with {
                 (result, context) = answer(message)
