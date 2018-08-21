@@ -29,6 +29,9 @@
 'Input length = 1
 'Input length = 1
 'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
 'startup failed:
 '<Script1.groovy: 1: unexpected token: -- @ line 1, column 2.
 '   +--------+
@@ -75,6 +78,56 @@
 ':Script1.groovy: 2: unexpected token:  @ line 2, column 1.
 '1 error
 '
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
+'Input length = 1
 'Input length = 1
 'Input length = 1
 'Input length = 1
@@ -5214,6 +5267,13 @@
 '1 error
 '
 'startup failed:
+';Script1.groovy: 1: unexpected token: < @ line 1, column 1.
+'*   <?xml version="1.0" encoding="UTF-8"?>
+'   ^
+'
+'1 error
+'
+'startup failed:
 '<Script1.groovy: 1: unexpected token: -- @ line 1, column 2.
 '   +--------+
 '    ^
@@ -5708,6 +5768,13 @@
 '1 error
 '
 'startup failed:
+';Script1.groovy: 1: unexpected token: < @ line 1, column 1.
+'   <!DOCTYPE html>
+'   ^
+'
+'1 error
+'
+'startup failed:
 '<Script1.groovy: 2: unexpected char: '#' @ line 2, column 1.
 '   #summary {
 '   ^
@@ -5721,6 +5788,9 @@
 '
 '1 error
 '
+39Input length = 1
+39Input length = 1
+39Input length = 1
 39Input length = 1
 39Input length = 1
 39Input length = 1
@@ -10878,6 +10948,164 @@
 39Input length = 1
 39Input length = 1
 39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
+39Input length = 1
 39startup failed:
 39;Script1.groovy: 1: unexpected token: < @ line 1, column 1.
 39*   <?xml version="1.0" encoding="UTF-8"?>
@@ -10886,6 +11114,13 @@
 391 error
 39
 39Input length = 1
+39startup failed:
+39;Script1.groovy: 1: unexpected token: < @ line 1, column 1.
+39*   <?xml version="1.0" encoding="UTF-8"?>
+39   ^
+39
+391 error
+39
 39startup failed:
 39;Script1.groovy: 1: unexpected token: < @ line 1, column 1.
 39*   <?xml version="1.0" encoding="UTF-8"?>
@@ -11430,6 +11665,13 @@
 391 error
 39
 39startup failed:
+39;Script1.groovy: 1: unexpected token: < @ line 1, column 1.
+39   <!DOCTYPE html>
+39   ^
+39
+391 error
+39
+39startup failed:
 39<Script1.groovy: 2: unexpected char: '#' @ line 2, column 1.
 39   #summary {
 39   ^
@@ -11443,9 +11685,9 @@
 39
 391 error
 39
-@ 1No features found at [classpath:io/deniffel/bot]
-@ 
-@ 0 Scenarios
-@ 0 Steps
-@ 	0m0.001s
-@ 
+D 1No features found at [classpath:io/deniffel/bot]
+D 
+D 0 Scenarios
+D 0 Steps
+D 	0m0.001s
+D 

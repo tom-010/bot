@@ -1,5 +1,6 @@
 package io.deniffel.bot
 
+import io.deniffel.bot.skyBot.Filesystem
 import io.deniffel.bot.skyBot.PluginManager
 import org.junit.Before
 import org.junit.Ignore;
@@ -8,7 +9,6 @@ import org.junit.Test;
 import java.nio.file.Path;
 import java.nio.file.Paths
 
-import static PluginManager.Filesystem
 import static org.junit.Assert.*;
 
 class PluginManagerTest {
@@ -16,27 +16,7 @@ class PluginManagerTest {
     PluginManager uut;
     FSMock fs;
 
-    class FSMock extends Filesystem {
 
-        List<Path> nextFilesResult = new LinkedList<>();
-        String nextFileReadResult = "";
-        boolean nextIsDirectory = false
-
-        @Override
-        List<Path> filesInFolder(String path) {
-            return nextFilesResult;
-        }
-
-        @Override
-        String read(Path path) {
-            return nextFileReadResult;
-        }
-
-        @Override
-        boolean isDirectory(Path path) {
-            return nextIsDirectory
-        }
-    }
 
     @Before
     void setUp() {

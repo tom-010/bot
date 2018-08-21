@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="io.deniffel.bot.EchoTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2018-08-21T05:52:10" hostname="thomas-skytala" time="0.001">
+<testsuite name="io.deniffel.bot.EchoTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2018-08-21T06:53:17" hostname="thomas-skytala" time="0.0">
   <properties/>
   <testcase name="multipleBlanksBeforeAndAfterEcho_ignoresIt" classname="io.deniffel.bot.EchoTest" time="0.0"/>
   <testcase name="sendingSimpleEcho_returnsTheSameMessageWithoutEcho" classname="io.deniffel.bot.EchoTest" time="0.0"/>

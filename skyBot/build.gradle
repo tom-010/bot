@@ -25,5 +25,7 @@ dependencies {
     testCompile('io.cucumber:cucumber-java:3.0.2')
     testCompile('io.cucumber:cucumber-junit:3.0.2')
     compile project(':bot')
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.6'
+    compile group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml', version: '2.9.6'
 }
 
