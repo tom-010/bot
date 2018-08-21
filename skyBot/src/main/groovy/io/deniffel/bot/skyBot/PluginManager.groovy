@@ -66,7 +66,6 @@ class PluginManager {
         }
 
         }
-
     }
 
     def answer(String message, Map<String, String> ctx = [:]) {
@@ -106,7 +105,12 @@ class PluginManager {
     static class Filesystem {
 
         List<Path> filesInFolder(String path) {
-            return Files.walk(Paths.get(path)).collect()
+            try {
+                return Files.walk(Paths.get(path)).collect()
+            } catch (Exception e) {
+                println e.message
+                return []
+            }
         }
 
         String read(Path path) {

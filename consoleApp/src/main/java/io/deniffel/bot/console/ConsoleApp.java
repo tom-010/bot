@@ -2,14 +2,20 @@ package io.deniffel.bot.console;
 
 import io.deniffel.bot.base.Response;
 import io.deniffel.bot.skyBot.PluginBot;
+import io.deniffel.bot.skyBot.PluginManager;
 
 import java.nio.file.Paths;
 import java.util.Scanner;
 
 public class ConsoleApp {
 
+    private PluginManager manager;
+    private PluginBot bot;
 
-    private PluginBot bot = new PluginBot("consoleApp/plugins");
+    public ConsoleApp() {
+        manager = PluginManager.build("consoleApp/plugins");
+        bot = new PluginBot(manager);
+    }
 
     public static void main(String... args) {
         new ConsoleApp().mainLoop();
@@ -20,6 +26,9 @@ public class ConsoleApp {
         String input;
         while((input = scanner.nextLine()) != null) {
             handleInput(input);
+
+            if("reload".equals(input))
+                manager.init();
 
             if("exit".equals(input))
                 break;

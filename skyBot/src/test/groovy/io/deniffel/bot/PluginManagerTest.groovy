@@ -270,6 +270,11 @@ class PluginManagerTest {
         // no exception expected here
     }
 
+    @Test
+    void basePathDoesNotExist_emptyFilesListButNoError() {
+        PluginManager.build("/this/does/not/exists/adlkfjaldsfj98afd9asvx")
+    }
+
     private void nextScript(String content) {
         fs.nextFileReadResult = content
         fs.nextFilesResult.add(Paths.get("./empty_script.groovy"))

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="io.deniffel.bot.SubBotTests" tests="5" skipped="0" failures="0" errors="0" timestamp="2018-08-21T05:31:03" hostname="thomas-skytala" time="0.001">
+<testsuite name="io.deniffel.bot.SubBotTests" tests="5" skipped="0" failures="0" errors="0" timestamp="2018-08-21T05:52:14" hostname="thomas-skytala" time="0.0">
   <properties/>
   <testcase name="message_delegatesMessageToSubBot" classname="io.deniffel.bot.SubBotTests" time="0.0"/>
   <testcase name="onlyFirstSubBotsKnowsTheAnswer_firstsBotResponse" classname="io.deniffel.bot.SubBotTests" time="0.0"/>

@@ -1,9 +1,9 @@
 
 def activatorRegexes() {
-    return ["Christoph.*", "Felix.*", "Chris.*toph"];
+    return ["Tom.*"];
 }
 
 def answer(String incomingMessage, Map<String, Object> context = [:]) {
 
-    return ["Wölfle", context]
+    return ["Deniffel", context]
 }
