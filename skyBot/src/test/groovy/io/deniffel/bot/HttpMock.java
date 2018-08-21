@@ -1,6 +1,6 @@
 package io.deniffel.bot;
 
-import skyBot.Http;
+import io.deniffel.bot.skyBot.Http;
 import io.deniffel.bot.base.Message;
 import io.deniffel.bot.base.Response;
 

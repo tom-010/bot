@@ -1,4 +1,4 @@
-package skyBot;
+package io.deniffel.bot.skyBot;
 
 import io.deniffel.bot.base.Message;
 import io.deniffel.bot.base.Response;

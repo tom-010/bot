@@ -1,4 +1,4 @@
-package skyBot;
+package io.deniffel.bot.skyBot;
 
 public class RegistrationRequest {
 

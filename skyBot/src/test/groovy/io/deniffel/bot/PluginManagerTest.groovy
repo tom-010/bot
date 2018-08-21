@@ -1,5 +1,6 @@
 package io.deniffel.bot
 
+import io.deniffel.bot.skyBot.PluginManager
 import org.junit.Before
 import org.junit.Ignore;
 import org.junit.Test;
@@ -245,7 +246,7 @@ class PluginManagerTest {
     }
 
     @Test
-    public void scriptHasAnError_resultingContextIsTheGivenOne() {
+    void scriptHasAnError_resultingContextIsTheGivenOne() {
         nextScript('''
         invalid groovy code
         ''')
@@ -257,18 +258,14 @@ class PluginManagerTest {
         assertEquals("value", ctx.get("key"))
     }
 
-    /*
-    100% Coverage
-     */
-
     @Test
-    public void buildWithDefaultFileSystemWorks() {
+    void buildWithDefaultFileSystemWorks() {
         PluginManager.build(".")
         // no exception expected here
     }
 
     @Test
-    public void constructWithDefaultFileSystemWorks() {
+    void constructWithDefaultFileSystemWorks() {
         new PluginManager(".")
         // no exception expected here
     }

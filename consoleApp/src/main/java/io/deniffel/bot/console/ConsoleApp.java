@@ -1,12 +1,15 @@
 package io.deniffel.bot.console;
 
-import skyBot.EchoBot;
+import io.deniffel.bot.base.Response;
+import io.deniffel.bot.skyBot.PluginBot;
 
+import java.nio.file.Paths;
 import java.util.Scanner;
 
 public class ConsoleApp {
 
-    EchoBot bot = new EchoBot();
+
+    private PluginBot bot = new PluginBot("consoleApp/plugins");
 
     public static void main(String... args) {
         new ConsoleApp().mainLoop();
@@ -24,7 +27,11 @@ public class ConsoleApp {
     }
 
     private void handleInput(String input) {
-        System.out.println(bot.enter(input).response());
+        Response response = bot.enter(input);
+        if(response.isPresent())
+            System.out.println("> " + response.response());
+        else
+            System.out.println("<<empty>>");
     }
 
 

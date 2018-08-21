@@ -1,4 +1,4 @@
-package io.deniffel.bot
+package io.deniffel.bot.skyBot
 
 import java.nio.file.Files
 import java.nio.file.Paths
@@ -61,7 +61,10 @@ class PluginManager {
                 }
 
         }
-        catch(Exception ignored) {}
+        catch(Exception e) {
+            println e.message
+        }
+
         }
 
     }
@@ -108,7 +111,7 @@ class PluginManager {
 
         String read(Path path) {
             String result = "";
-            Files.readAllLines(path).forEach{ result += it }
+            Files.readAllLines(path).forEach{ result += it + "\n" }
             return result
         }
 

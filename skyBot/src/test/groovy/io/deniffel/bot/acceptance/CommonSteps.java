@@ -3,9 +3,9 @@ package io.deniffel.bot.acceptance;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import skyBot.EchoBot;
+import io.deniffel.bot.skyBot.EchoBot;
 import io.deniffel.bot.base.Response;
-import skyBot.SkyBot;
+import io.deniffel.bot.skyBot.SkyBot;
 
 import static org.junit.Assert.*;
 

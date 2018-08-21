@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="io.deniffel.bot.SubBotTests" tests="5" skipped="0" failures="0" errors="0" timestamp="2018-08-21T04:14:06" hostname="thomas-skytala" time="0.002">
+<testsuite name="io.deniffel.bot.SubBotTests" tests="5" skipped="0" failures="0" errors="0" timestamp="2018-08-21T05:31:03" hostname="thomas-skytala" time="0.001">
   <properties/>
-  <testcase name="message_delegatesMessageToSubBot" classname="io.deniffel.bot.SubBotTests" time="0.001"/>
+  <testcase name="message_delegatesMessageToSubBot" classname="io.deniffel.bot.SubBotTests" time="0.0"/>
   <testcase name="onlyFirstSubBotsKnowsTheAnswer_firstsBotResponse" classname="io.deniffel.bot.SubBotTests" time="0.0"/>
   <testcase name="subBotDoesNotRespond_subBotsResponseIsDiscarded" classname="io.deniffel.bot.SubBotTests" time="0.0"/>
-  <testcase name="subBotResultsInResponse_responseFromSubBotIsActuallyTaken" classname="io.deniffel.bot.SubBotTests" time="0.001"/>
+  <testcase name="subBotResultsInResponse_responseFromSubBotIsActuallyTaken" classname="io.deniffel.bot.SubBotTests" time="0.0"/>
   <testcase name="onlySecondSubBotsKnowsTheAnswer_secondsBotResponse" classname="io.deniffel.bot.SubBotTests" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
