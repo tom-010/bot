@@ -1,6 +1,6 @@
 package io.deniffel.bot.console;
 
-import io.deniffel.bot.skyBot.EchoBot;
+import skyBot.EchoBot;
 
 import java.util.Scanner;
 
