@@ -16,5 +16,6 @@ apply plugin: 'io.spring.dependency-management'
 dependencies {
     compile project(':bot')
     compile("org.springframework.boot:spring-boot-starter-web")
-
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.6'
+    compile group: 'com.fasterxml', name: 'jackson-module-json-org', version: '0.9.1'
 }
