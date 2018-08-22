@@ -28,6 +28,6 @@ public class CommonSteps {
 
     @Then("^the bot returns \"([^\"]*)\"$")
     public void theBotReturns(String botsReturnValue) throws Throwable {
-        assertEquals(botsReturnValue, lastResult.response());
+        assertEquals(botsReturnValue, lastResult.asString());
     }
 }

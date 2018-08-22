@@ -25,7 +25,7 @@ public class Response {
         return r;
     }
 
-    public String response() {
+    public String asString() {
         return content;
     }
 }

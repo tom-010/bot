@@ -11,12 +11,12 @@ public class WorkspaceTest {
 
     @Before
     public void setUp() {
-        workspace = Workspace.build();
+        workspace = Workspace.get();
     }
 
     @Test
-    public void enterTwoWorkspaces_theyAreNotTheSame() {
-        assertFalse(Workspace.build() == Workspace.build());
+    public void enterTwoWorkspacestheyAreTheSame() {
+        assertTrue(Workspace.get() == Workspace.get());
     }
 
     @Test

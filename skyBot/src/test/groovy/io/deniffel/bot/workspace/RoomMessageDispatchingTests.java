@@ -1,7 +1,7 @@
 package io.deniffel.bot.workspace;
 
+import io.deniffel.bot.base.Listener;
 import io.deniffel.bot.base.Message;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 

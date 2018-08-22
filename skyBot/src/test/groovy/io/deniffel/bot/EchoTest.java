@@ -49,10 +49,10 @@ public class EchoTest {
     public void onlyEchoIsInMessage_emptyPresentMessageIsReturned() {
         Response response = bot.enter("echo");
         assertTrue(response.isPresent());
-        assertEquals("", response.response());
+        assertEquals("", response.asString());
     }
 
     private void assertEcho(String expectedResult, String message) {
-        assertEquals(expectedResult, bot.enter(message).response());
+        assertEquals(expectedResult, bot.enter(message).asString());
     }
 }

@@ -9,6 +9,7 @@ class PluginManager {
     Map<String, String> scripts = [:]
     private Filesystem fs
     private String basePath
+    private Long lastModifiedStamp = -1
 
     PluginManager(String basePath, Filesystem fs = new Filesystem()) {
         this.fs = fs
@@ -23,6 +24,13 @@ class PluginManager {
 
     boolean methodExists(obj, String method) {
         return obj.metaClass.respondsTo(obj, method).size() > 0
+    }
+
+    boolean hasPluginDirectoryChanged() {
+        boolean result = lastModifiedStamp != Paths.get(basePath).toFile().lastModified();
+        if(result)
+            lastModifiedStamp = Paths.get(basePath).toFile().lastModified()
+        return result
     }
 
     def init() {

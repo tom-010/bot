@@ -45,7 +45,7 @@ public class SubBotTests {
     public void subBotResultsInResponse_responseFromSubBotIsActuallyTaken() {
         Response response = Response.of("");
         subBot.nextResult = response;
-        assertEquals(response, bot.enter("some string, subBots knows everything, therefore sends a response in every case"));
+        assertEquals(response, bot.enter("some string, subBots knows everything, therefore sends a asString in every case"));
     }
 
     @Test

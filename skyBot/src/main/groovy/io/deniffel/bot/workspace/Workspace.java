@@ -7,8 +7,12 @@ public class Workspace {
 
     Map<String, Room> rooms = new HashMap<>();
 
-    public static Workspace build() {
-        return new Workspace();
+    private static Workspace instance;
+
+    public static Workspace get() {
+        if(instance == null)
+            instance = new Workspace();
+        return instance;
     }
 
     public Room enterRoom(String roomId) {

@@ -4,7 +4,6 @@ import io.deniffel.bot.base.Message
 import io.deniffel.bot.base.Response
 import io.deniffel.bot.skyBot.PluginManager
 import org.junit.Before
-import org.junit.Ignore
 import org.junit.Test
 import io.deniffel.bot.skyBot.PluginBot
 
@@ -39,7 +38,7 @@ class PluginBotTests {
         Response response = uut.enter("message")
 
         assertTrue(response.isPresent())
-        assertEquals("answer", response.response())
+        assertEquals("answer", response.asString())
     }
 
     @Test
