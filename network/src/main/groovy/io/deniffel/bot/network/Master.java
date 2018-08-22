@@ -4,14 +4,21 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
+@SpringBootApplication
 @RestController
-public class Server {
+public class Master {
 
     private List<Registration> registrations = new LinkedList<>();
+
+    public static void main(String[] args) {
+        SpringApplication.run(Master.class, args);
+    }
 
     @PostMapping("/")
     public void greeting(@Valid @RequestBody Registration registration) {
