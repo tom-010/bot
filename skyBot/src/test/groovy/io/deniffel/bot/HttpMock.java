@@ -3,6 +3,8 @@ package io.deniffel.bot;
 import io.deniffel.bot.skyBot.Http;
 import io.deniffel.bot.base.Message;
 import io.deniffel.bot.base.Response;
+import io.deniffel.bot.skyBot.RegistrationRequest;
+import io.deniffel.bot.skyBot.RegistrationResponse;
 
 class HttpMock implements Http {
     boolean wasCalled = false;
@@ -16,4 +18,11 @@ class HttpMock implements Http {
         totalRequests++;
         return null;
     }
+
+    @Override
+    public RegistrationResponse sendRegistrationRequest(RegistrationRequest request, String url) {
+        this.lastUrlUsed = url;
+        return null;
+    }
+
 }

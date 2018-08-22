@@ -7,7 +7,7 @@ import java.nio.file.Path
 class FSMock extends Filesystem {
 
     List<Path> nextFilesResult = new LinkedList<>();
-    String nextFileReadResult = "";
+    public String nextFileReadResult = "";
     boolean nextIsDirectory = false
     boolean nextFileIsNotFound = false
 
