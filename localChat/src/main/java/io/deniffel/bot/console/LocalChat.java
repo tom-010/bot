@@ -3,8 +3,6 @@ package io.deniffel.bot.console;
 import io.deniffel.bot.base.Response;
 import io.deniffel.bot.skyBot.PluginBot;
 import io.deniffel.bot.skyBot.PluginManager;
-import io.deniffel.bot.workspace.Room;
-import io.deniffel.bot.workspace.Workspace;
 
 import java.util.Scanner;
 import java.util.Timer;

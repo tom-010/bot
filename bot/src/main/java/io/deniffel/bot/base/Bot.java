@@ -1,6 +1,9 @@
 package io.deniffel.bot.base;
 
 
+import java.util.LinkedList;
+import java.util.List;
+
 public interface Bot {
     default Response enter(String enteredString) {
         return enter(new Message(enteredString));
@@ -8,5 +11,8 @@ public interface Bot {
     Response enter(Message message);
     default void receive(Message message) {
         enter(message);
+    }
+    default List<String> matchers() {
+        return new LinkedList<>();
     }
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="io.deniffel.bot.console.StartupTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-08-22T09:18:42" hostname="thomas-skytala" time="0.686">
+<testsuite name="io.deniffel.bot.console.StartupTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-08-22T14:50:14" hostname="thomas-skytala" time="0.651">
   <properties/>
-  <testcase name="canInstanciateConsoleApp" classname="io.deniffel.bot.console.StartupTests" time="0.686"/>
+  <testcase name="canInstanciateConsoleApp" classname="io.deniffel.bot.console.StartupTests" time="0.65"/>
   <testcase name="applicationStartswithin5Seconds" classname="io.deniffel.bot.console.StartupTests" time="0.0"/>
-  <system-out><![CDATA[consoleApp/plugins
+  <system-out><![CDATA[localChat/plugins
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
