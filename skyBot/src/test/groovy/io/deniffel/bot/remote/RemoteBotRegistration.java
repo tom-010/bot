@@ -15,7 +15,7 @@ public class RemoteBotRegistration {
     @Before
     public void setUp() throws Exception {
         http = new HttpMock();
-        bot = new RemoteBot(http);
+        bot = new RemoteBot(http, "");
     }
 
     @Test

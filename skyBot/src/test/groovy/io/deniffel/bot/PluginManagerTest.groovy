@@ -1,12 +1,9 @@
 package io.deniffel.bot
 
-import io.deniffel.bot.skyBot.Filesystem
 import io.deniffel.bot.skyBot.PluginManager
 import org.junit.Before
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.Test
 
-import java.nio.file.Path;
 import java.nio.file.Paths
 
 import static org.junit.Assert.*;
@@ -22,7 +19,7 @@ class PluginManagerTest {
     void setUp() {
         fs = new FSMock();
         uut = PluginManager.build(".", fs);
-        uut.init()
+        uut.refresh()
     }
 
     @Test
@@ -69,7 +66,7 @@ class PluginManagerTest {
         '''
         fs.nextFilesResult.add(Paths.get("./directory"))
         fs.nextIsDirectory = true
-        uut.init()
+        uut.refresh()
 
         assertEquals(0, uut.scripts.size())
     }
@@ -258,7 +255,7 @@ class PluginManagerTest {
     private void nextScript(String content) {
         fs.nextFileReadResult = content
         fs.nextFilesResult.add(Paths.get("./empty_script.groovy"))
-        uut.init() // reload
+        uut.refresh() // reload
     }
 
 

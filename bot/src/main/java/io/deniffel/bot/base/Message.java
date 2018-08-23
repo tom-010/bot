@@ -48,4 +48,12 @@ public class Message implements Cloneable {
     public void setRoomId(String roomId) {
         this.roomId = roomId;
     }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
 }

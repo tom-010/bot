@@ -19,8 +19,8 @@ public class RemoteMessageExchange {
     @Before
     public void setUp() throws Exception {
         http = new HttpMock();
-        botWithoutRegistrations = new RemoteBot(http);
-        remoteBot = new RemoteBot(http);
+        botWithoutRegistrations = new RemoteBot(http, "");
+        remoteBot = new RemoteBot(http, "");
         remoteBot.register(new RegistrationRequest("http://myUrl", ".*"));
     }
 

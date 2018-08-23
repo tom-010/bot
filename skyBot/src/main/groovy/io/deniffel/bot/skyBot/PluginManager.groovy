@@ -1,8 +1,6 @@
 package io.deniffel.bot.skyBot
 
-import java.nio.file.Files
 import java.nio.file.Paths
-import java.nio.file.Path
 
 class PluginManager {
 
@@ -18,7 +16,7 @@ class PluginManager {
 
     static PluginManager build(String basePath, Filesystem fs = new Filesystem()) {
         def manager = new PluginManager(basePath, fs)
-        manager.init()
+        manager.refresh()
         return manager
     }
 
@@ -33,8 +31,7 @@ class PluginManager {
         return result
     }
 
-    def init() {
-
+    def refresh() {
         fs.filesInFolder(basePath).forEach {
             try {
                 if(fs.isDirectory(it))
