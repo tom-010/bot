@@ -5,7 +5,6 @@ pipeline {
             steps {
                 sh './gradlew test'
                 sh './gradlew cucumber'
-
             }
         }
         stage('Test-Coverage') {
@@ -32,7 +31,7 @@ pipeline {
                 subject: "Bot auf Rot",
                 body: """<p>ACHTUNG!</p>
                 <p style="color: red"><strong>Das Bot-Projekt ist nicht stabil!</strong></p>
-               <p>VG,</p>
+                <p>VG,</p>
                 Thomas""",
                 to: "tdeniffel@gmail.com"
             )

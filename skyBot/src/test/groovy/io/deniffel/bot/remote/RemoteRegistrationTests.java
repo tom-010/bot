@@ -42,11 +42,6 @@ public class RemoteRegistrationTests {
         return config;
     }
 
-    @Test
-    public void registration_sendsHttpRequestToMastersUrl() {
-        worker.registerMySelfOnMasters();
-        assertEquals(config.urls.master, http.lastUrlUsed);
-    }
 
     @Test
     public void registration_sendsTheListsOfRegexes() {

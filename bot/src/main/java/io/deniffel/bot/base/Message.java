@@ -2,6 +2,20 @@ package io.deniffel.bot.base;
 
 import java.util.Objects;
 
+/*
+    Answer-|
+    |      |
+    v      |
+ id Message*---Gespräche--Kontext-->Map<String, Object>
+    *
+    |
+    Raum --* Listener <--- Bot
+    *
+    |
+    Workspace
+
+ */
+
 public class Message implements Cloneable {
 
     private String message;

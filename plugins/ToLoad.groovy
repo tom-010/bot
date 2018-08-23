@@ -1,4 +1,3 @@
-
 def activatorRegexes() {
     return ["Hello.*"];
 }

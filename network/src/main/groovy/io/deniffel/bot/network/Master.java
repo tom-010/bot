@@ -13,6 +13,27 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
+/*
+ Master 1--* Node
+              |---Config
+ Channel
+    ^
+    |
+ Remote Channel
+
+ Master
+ |     |
+ M1   M2
+ |     |----Server
+ IOT
+
+ Master
+ (===()      Node
+-(===()-----(==()---Bot
+ (===()     (==()---|
+*/
+
+
 @SpringBootApplication
 @RestController
 public class Master {

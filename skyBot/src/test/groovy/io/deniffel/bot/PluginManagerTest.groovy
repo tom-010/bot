@@ -13,8 +13,6 @@ class PluginManagerTest {
     PluginManager uut;
     FSMock fs;
 
-
-
     @Before
     void setUp() {
         fs = new FSMock();
@@ -36,7 +34,6 @@ class PluginManagerTest {
         ''')
 
         assertEquals(0, uut.scripts.size() )
-
     }
 
     @Test
@@ -176,7 +173,7 @@ class PluginManagerTest {
     }
 
     @Test
-    public void noScriptWasRegistered_anwerIsNull() {
+    void noScriptWasRegistered_anwerIsNull() {
         // no scripts gets registered here
         def (res, ctx) = uut.answer("message")
         assertEquals(null, res);
@@ -194,7 +191,6 @@ class PluginManagerTest {
         assertEquals(null, res);
         assertTrue(ctx instanceof Map<String, String>)
     }
-
 
     @Test
     void regexOfRegisteredScriptMatches_answerIsFilled() {
@@ -216,7 +212,6 @@ class PluginManagerTest {
         ''')
 
         def contextInput = [key: "value"]
-
         def (_, ctx) = uut.answer("message", contextInput)
 
         assertEquals("value", ctx.get("key"))
@@ -229,7 +224,6 @@ class PluginManagerTest {
         ''')
 
         def contextInput = [key: "value"]
-
         def (_, ctx) = uut.answer("message", contextInput)
 
         assertEquals("value", ctx.get("key"))
@@ -257,6 +251,4 @@ class PluginManagerTest {
         fs.nextFilesResult.add(Paths.get("./empty_script.groovy"))
         uut.refresh() // reload
     }
-
-
 }

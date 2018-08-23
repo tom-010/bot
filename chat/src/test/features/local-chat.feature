@@ -1,4 +1,4 @@
-Feature: Lokal Chat
+Feature: Local Chat
 
   Scenario: Echo-Script
     When I create a echo script
