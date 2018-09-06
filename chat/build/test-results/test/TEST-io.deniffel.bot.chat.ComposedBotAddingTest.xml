@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="io.deniffel.bot.chat.ComposedBotAddingTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2018-08-23T09:14:04" hostname="thomas-skytala" time="0.012">
+<testsuite name="io.deniffel.bot.chat.ComposedBotAddingTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2018-08-23T18:59:51" hostname="thomas-skytala" time="0.01">
   <properties/>
-  <testcase name="updatedBotAdded_botInCollectionGetsUpdated" classname="io.deniffel.bot.chat.ComposedBotAddingTest" time="0.008"/>
+  <testcase name="updatedBotAdded_botInCollectionGetsUpdated" classname="io.deniffel.bot.chat.ComposedBotAddingTest" time="0.006"/>
   <testcase name="noBotRegistered_answerIsNotPresent" classname="io.deniffel.bot.chat.ComposedBotAddingTest" time="0.002"/>
-  <testcase name="registeringFirstBots_increasesRegisteredBots" classname="io.deniffel.bot.chat.ComposedBotAddingTest" time="0.0"/>
+  <testcase name="registeringFirstBots_increasesRegisteredBots" classname="io.deniffel.bot.chat.ComposedBotAddingTest" time="0.001"/>
   <testcase name="botHasCustomEqualsAddedTwice_onyOneAdded" classname="io.deniffel.bot.chat.ComposedBotAddingTest" time="0.0"/>
   <testcase name="addSameBotTwice_onlyOneIsAdded" classname="io.deniffel.bot.chat.ComposedBotAddingTest" time="0.0"/>
   <testcase name="addDifferentBotsTwice_bothAdded" classname="io.deniffel.bot.chat.ComposedBotAddingTest" time="0.0"/>
